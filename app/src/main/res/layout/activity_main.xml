@@ -14,6 +14,11 @@
         android:layout_height="wrap_content"
         android:text="변수 연습 01"/>
 
+    <Button
+        android:id="@+id/btnVariable02"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="변수 연습 02"/>
 
 
 </LinearLayout>
