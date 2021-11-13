@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlin.math.log
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -83,7 +82,7 @@ class MainActivity : AppCompatActivity() {
 //            A회사의 조건
             val companyASalary = 3000
             val companyADistance = 50
-            val companyAWorkEasy = true
+            val companyAOffEarly = true
 
 //            1번 구직자는 취업 의사?
 //            조건 : 연봉 4천 이상이면?
@@ -95,7 +94,7 @@ class MainActivity : AppCompatActivity() {
 //            2번 구직자
 //            조건 : 이동시간이 30분 이내 or 빨리 퇴근
 
-            val person02OK = (companyADistance >=30) || (companyAWorkEasy == true)
+            val person02OK = (companyADistance >=30) || (companyAOffEarly == true)
 //            Bool 변수 "== true"는 할 필요가 없는 질문.
 //            Bool 변수 안에 있는 값을 그대로 꺼내 쓰면, == true와 항상 같은 결과.
 //            val person02OK = (companyADistance >=30) || companyAWorkEasy
@@ -105,9 +104,8 @@ class MainActivity : AppCompatActivity() {
 //            3번 구직자
 //            조건 : 빠른 퇴근안하는 회사 -> Not연산
 
-            val person03OK = !companyAWorkEasy
-
-            Log.d("조건문02",companyAWorkEasy.toString())
+            val person03OK = !companyAOffEarly
+            Log.d("조건문02",person03OK.toString())
 
 
 
